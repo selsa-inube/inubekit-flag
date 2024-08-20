@@ -2,10 +2,8 @@ import styled from "styled-components";
 import { inube } from "@inubekit/foundations";
 
 const StyledFlag = styled.div`
-  background-color: ${({ theme, $appearance }) =>
-    theme?.sectionMessage?.[$appearance]?.background?.color ||
-    inube.sectionMessage[$appearance].background.color};
-  width: ${($isMessageResponsive) => ($isMessageResponsive ? "auto" : "400px")};
+  width: 100%;
+  max-width: 400px;
   height: 100%;
   max-height: 78px;
   border-radius: 4px;

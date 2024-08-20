@@ -1,15 +1,14 @@
-import { MdWarning } from "react-icons/md";
-import { action } from "@storybook/addon-actions";
 import { Button } from "@inubekit/button";
 import { FlagPortal } from ".";
 import { FlagProvider } from "../../providers/FlagsProvider";
 import { useFlag } from "../../hooks/useFlag";
+import { ElementType } from "react";
 
 const story = {
   title: "feedback/FlagPortal",
   components: [FlagPortal],
   decorators: [
-    (Story: React.FC) => (
+    (Story: ElementType) => (
       <FlagProvider>
         <Story />
       </FlagProvider>
@@ -17,17 +16,15 @@ const story = {
   ],
 };
 
-const Default: React.FC = () => {
-  const { addMessage } = useFlag();
+const Default = () => {
+  const { addFlag } = useFlag();
 
   const handleClick = () => {
-    addMessage({
-      icon: <MdWarning />,
+    addFlag({
       title: "Title",
       description: "Description",
       appearance: "primary",
       duration: 10000,
-      closeFlag: action("Flag closed"),
     });
   };
 

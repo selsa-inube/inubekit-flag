@@ -1,8 +1,12 @@
-import { useState } from "react";
-import { MdClear } from "react-icons/md";
-import { useContext } from "react";
+import { useState, useContext } from "react";
+import {
+  MdClear,
+  MdChat,
+  MdCheckCircleOutline,
+  MdOutlineWarningAmber,
+  MdErrorOutline,
+} from "react-icons/md";
 import { ThemeContext } from "styled-components";
-import { useMediaQuery } from "@inubekit/hooks";
 import { Stack } from "@inubekit/stack";
 import { ITextAppearance, Text } from "@inubekit/text";
 import { CountdownBar, ICountdownBarAppearance } from "@inubekit/countdownbar";
@@ -18,22 +22,35 @@ import {
 
 interface IFlag {
   id?: string;
-  icon: JSX.Element;
   title: string;
   description: string;
   appearance: IFlagAppearance;
   duration: number;
   closeFlag?: () => void;
-  isMessageResponsive?: boolean;
 }
 
+const iconMap: Record<IFlagAppearance, JSX.Element> = {
+  primary: <MdChat />,
+  light: <MdChat />,
+  gray: <MdChat />,
+  dark: <MdChat />,
+  success: <MdCheckCircleOutline />,
+  warning: <MdOutlineWarningAmber />,
+  danger: <MdErrorOutline />,
+  help: <MdErrorOutline />,
+};
+
+const getIconForAppearance = (appearance: IFlagAppearance): JSX.Element => {
+  return iconMap[appearance];
+};
+
 const Flag = (props: IFlag) => {
-  const { icon, title, description, appearance, duration, closeFlag } = props;
+  const { title, description, appearance, duration, closeFlag } = props;
   const theme: typeof inube = useContext(ThemeContext);
   const [isPaused, setIsPaused] = useState(false);
-  const isMessageResponsive = useMediaQuery("(max-width: 565px)");
-
   const newDescription = description.substring(0, 240);
+
+  const selectedIcon = getIconForAppearance(appearance);
 
   const iconAppearance = (appearance: IFlagAppearance) => {
     return (theme?.sectionMessage?.[appearance]?.icon.appearance ||
@@ -69,24 +86,21 @@ const Flag = (props: IFlag) => {
       $appearance={appearance}
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
-      $isMessageResponsive={isMessageResponsive}
     >
       <Stack justifyContent="space-between" padding="16px">
         <Stack alignItems="center" gap="16px">
           <Icon
             size="24px"
             appearance={iconAppearance(appearance)}
-            icon={icon}
+            icon={selectedIcon}
           />
           <Stack direction="column" gap="6px">
             <Text type="label" size="large" textAlign="start" weight="bold">
               {title}
             </Text>
-            {!isMessageResponsive && (
-              <Text size="medium" appearance={textAppearance} textAlign="start">
-                {newDescription}
-              </Text>
-            )}
+            <Text size="medium" appearance={textAppearance} textAlign="start">
+              {newDescription}
+            </Text>
           </Stack>
         </Stack>
         <StyledCloseIconContainer>

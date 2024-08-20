@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const StyledContainer = styled.div`
   position: fixed;
-  top: 10px;
+  bottom: 10px;
   right: 10px;
   z-index: 2;
   display: flex;

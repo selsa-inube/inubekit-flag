@@ -20,7 +20,6 @@ export default defineConfig({
         "react/jsx-runtime",
         "@inubekit/countdownbar",
         "@inubekit/foundations",
-        "@inubekit/hooks",
         "@inubekit/icon",
         "@inubekit/stack",
         "@inubekit/text",

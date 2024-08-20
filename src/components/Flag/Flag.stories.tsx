@@ -1,4 +1,3 @@
-import { MdWarning } from "react-icons/md";
 import { action } from "@storybook/addon-actions";
 
 import { props, parameters } from "./props";
@@ -21,7 +20,6 @@ Default.args = {
   title: "Title",
   description: "Description",
   appearance: "primary",
-  icon: <MdWarning />,
   duration: 10000,
   closeFlag: closeFlag,
 };
