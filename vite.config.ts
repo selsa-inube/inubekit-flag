@@ -21,7 +21,6 @@ export default defineConfig({
         "@inubekit/button",
         "@inubekit/countdownbar",
         "@inubekit/foundations",
-        "@inubekit/hooks",
         "@inubekit/icon",
         "@inubekit/stack",
         "@inubekit/text",
