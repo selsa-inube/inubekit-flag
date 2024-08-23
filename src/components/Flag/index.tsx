@@ -1,39 +1,37 @@
 import { useState, useContext } from "react";
 import {
   MdClear,
-  MdChat,
+  MdOutlineChat,
   MdCheckCircleOutline,
   MdOutlineWarningAmber,
   MdErrorOutline,
 } from "react-icons/md";
-import { ThemeContext } from "styled-components";
+
 import { Stack } from "@inubekit/stack";
-import { ITextAppearance, Text } from "@inubekit/text";
-import { CountdownBar, ICountdownBarAppearance } from "@inubekit/countdownbar";
-import { IIconAppearance, Icon } from "@inubekit/icon";
+import { Text } from "@inubekit/text";
+import { CountdownBar } from "@inubekit/countdownbar";
+import { Icon } from "@inubekit/icon";
 
 import { IFlagAppearance } from "./props";
-import { inube } from "@inubekit/foundations";
 import {
   StyledFlag,
   StyledCountdownBarContainer,
   StyledCloseIconContainer,
 } from "./styles";
+import { FlagContext, FlagContextType } from "../../providers/FlagsProvider";
 
 interface IFlag {
-  id?: string;
+  id: string;
   title: string;
   description: string;
   appearance: IFlagAppearance;
   duration: number;
-  closeFlag?: () => void;
 }
 
 const iconMap: Record<IFlagAppearance, JSX.Element> = {
-  primary: <MdChat />,
-  light: <MdChat />,
-  gray: <MdChat />,
-  dark: <MdChat />,
+  primary: <MdOutlineChat />,
+  gray: <MdOutlineChat />,
+  dark: <MdOutlineChat />,
   success: <MdCheckCircleOutline />,
   warning: <MdOutlineWarningAmber />,
   danger: <MdErrorOutline />,
@@ -45,40 +43,16 @@ const getIconForAppearance = (appearance: IFlagAppearance): JSX.Element => {
 };
 
 const Flag = (props: IFlag) => {
-  const { title, description, appearance, duration, closeFlag } = props;
-  const theme: typeof inube = useContext(ThemeContext);
+  const { id, title, description, appearance, duration } = props;
   const [isPaused, setIsPaused] = useState(false);
+  const { removeFlag } = useContext(FlagContext) as FlagContextType;
+
   const newDescription = description.substring(0, 240);
 
   const selectedIcon = getIconForAppearance(appearance);
 
-  const iconAppearance = (appearance: IFlagAppearance) => {
-    return (theme?.sectionMessage?.[appearance]?.icon.appearance ||
-      inube.sectionMessage[appearance]?.icon.appearance) as IIconAppearance;
-  };
-
-  const countdownBarAppearance = (appearance: IFlagAppearance) => {
-    return (theme?.sectionMessage?.[appearance]?.countdownbar.appearance ||
-      inube.sectionMessage[appearance]?.countdownbar
-        .appearance) as ICountdownBarAppearance;
-  };
-
-  const textAppearance = (theme?.sectionMessage?.gray?.content.appearance ||
-    inube.sectionMessage.gray?.content.appearance) as ITextAppearance;
-
-  const closeIconAppearance = (theme?.sectionMessage?.dark?.icon.appearance ||
-    inube.sectionMessage.dark?.icon.appearance) as IIconAppearance;
-
-  const interceptionCloseFlag = () => {
-    try {
-      closeFlag && closeFlag();
-    } catch (error) {
-      if (error instanceof Error) {
-        throw new Error(error.message);
-      } else {
-        throw new Error("An unknown error occurred");
-      }
-    }
+  const handleRemoveFlag = () => {
+    removeFlag(id);
   };
 
   return (
@@ -89,16 +63,12 @@ const Flag = (props: IFlag) => {
     >
       <Stack justifyContent="space-between" padding="16px">
         <Stack alignItems="center" gap="16px">
-          <Icon
-            size="24px"
-            appearance={iconAppearance(appearance)}
-            icon={selectedIcon}
-          />
+          <Icon size="24px" appearance={appearance} icon={selectedIcon} />
           <Stack direction="column" gap="6px">
             <Text type="label" size="large" textAlign="start" weight="bold">
               {title}
             </Text>
-            <Text size="medium" appearance={textAppearance} textAlign="start">
+            <Text size="medium" appearance="gray" textAlign="start">
               {newDescription}
             </Text>
           </Stack>
@@ -106,8 +76,8 @@ const Flag = (props: IFlag) => {
         <StyledCloseIconContainer>
           <Icon
             size="16px"
-            onClick={interceptionCloseFlag}
-            appearance={closeIconAppearance}
+            onClick={handleRemoveFlag}
+            appearance="dark"
             icon={<MdClear />}
           />
         </StyledCloseIconContainer>
@@ -116,9 +86,9 @@ const Flag = (props: IFlag) => {
         <StyledCountdownBarContainer>
           <CountdownBar
             paused={isPaused}
-            appearance={countdownBarAppearance(appearance)}
+            appearance={appearance}
             duration={duration}
-            onCountdown={interceptionCloseFlag}
+            onCountdown={handleRemoveFlag}
           />
         </StyledCountdownBarContainer>
       )}

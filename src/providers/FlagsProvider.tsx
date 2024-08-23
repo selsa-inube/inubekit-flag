@@ -4,22 +4,22 @@ import { IFlag } from "../components/Flag";
 
 interface FlagContextType {
   flags: IFlag[];
-  addFlag: (message: Omit<IFlag, "id">) => void;
+  addFlag: (flag: Omit<IFlag, "id">) => void;
   removeFlag: (id: string) => void;
 }
 
 const FlagContext = createContext<FlagContextType | undefined>(undefined);
 
-export const FlagProvider = ({ children }: { children: ReactNode }) => {
+const FlagProvider = ({ children }: { children: ReactNode }) => {
   const [flags, setFlags] = useState<IFlag[]>([]);
 
-  const addFlag = (message: Omit<IFlag, "id">) => {
+  const addFlag = (flag: Omit<IFlag, "id">) => {
     const id = crypto.randomUUID();
-    setFlags([...flags, { ...message, id }]);
+    setFlags([...flags, { ...flag, id }]);
   };
 
   const removeFlag = (id: string) => {
-    setFlags((prevMessages) => prevMessages.filter((msg) => msg.id !== id));
+    setFlags((prevFlags) => prevFlags.filter((flag) => flag.id !== id));
   };
 
   return (
@@ -30,5 +30,5 @@ export const FlagProvider = ({ children }: { children: ReactNode }) => {
   );
 };
 
-export { FlagContext };
+export { FlagContext, FlagProvider };
 export type { FlagContextType };

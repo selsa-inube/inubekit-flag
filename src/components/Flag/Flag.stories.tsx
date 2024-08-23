@@ -2,6 +2,7 @@ import { action } from "@storybook/addon-actions";
 
 import { props, parameters } from "./props";
 import { IFlag, Flag } from ".";
+import { FlagProvider } from "../../providers/FlagsProvider";
 
 const story = {
   title: "feedback/Flag",
@@ -12,7 +13,11 @@ const story = {
   },
 };
 
-const Default = (args: IFlag) => <Flag {...args} />;
+const Default = (args: IFlag) => (
+  <FlagProvider>
+    <Flag {...args} />{" "}
+  </FlagProvider>
+);
 const closeFlag = () => {
   action("Flag closed")();
 };

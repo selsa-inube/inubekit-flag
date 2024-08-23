@@ -12,6 +12,8 @@ const StyledFlag = styled.div`
     0px 1px 3px 1px rgba(0, 0, 0, 0.15);
   overflow: hidden;
   overflow-wrap: anywhere;
+  background-color: ${({ theme }) =>
+    theme?.palette?.neutral?.N0 || inube.palette.neutral.N0};
 `;
 
 const StyledCountdownBarContainer = styled.div`

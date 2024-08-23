@@ -4,18 +4,18 @@ import { Flag } from "../Flag";
 import { useFlag } from "../../hooks/useFlag";
 
 const FlagPortal = () => {
-  const { flags, removeFlag } = useFlag();
+  const { flags } = useFlag();
 
   return ReactDOM.createPortal(
     <StyledContainer>
-      {flags.map((msg) => (
+      {flags.map((flag) => (
         <Flag
-          key={msg.id}
-          title={msg.title}
-          description={msg.description}
-          appearance={msg.appearance}
-          duration={msg.duration}
-          closeFlag={() => removeFlag(msg.id!)}
+          key={flag.id}
+          id={flag.id}
+          title={flag.title}
+          description={flag.description}
+          appearance={flag.appearance}
+          duration={flag.duration}
         />
       ))}
     </StyledContainer>,
