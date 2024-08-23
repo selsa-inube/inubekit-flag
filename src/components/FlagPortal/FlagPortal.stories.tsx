@@ -24,7 +24,7 @@ const Default = () => {
       title: "Title",
       description: "Description",
       appearance: "primary",
-      duration: 10000,
+      duration: 100000,
     });
   };
 

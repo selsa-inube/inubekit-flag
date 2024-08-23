@@ -5,7 +5,7 @@ const StyledFlag = styled.div`
   width: 100%;
   max-width: 400px;
   height: 100%;
-  max-height: 78px;
+  max-height: 82px;
   border-radius: 4px;
   box-shadow:
     0px 1px 2px rgba(0, 0, 0, 0.3),
@@ -14,6 +14,11 @@ const StyledFlag = styled.div`
   overflow-wrap: anywhere;
   background-color: ${({ theme }) =>
     theme?.palette?.neutral?.N0 || inube.palette.neutral.N0};
+
+  @media (max-width: 400px) {
+    max-width: 312px;
+    max-height: 78px;
+  }
 `;
 
 const StyledCountdownBarContainer = styled.div`
