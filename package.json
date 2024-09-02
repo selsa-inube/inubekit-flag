@@ -51,7 +51,7 @@
     "@inubekit/hooks": "^1.2.0",
     "@inubekit/icon": "^2.13.0",
     "@inubekit/stack": "^3.5.0",
-    "@inubekit/text": "^2.13.0"
+    "@inubekit/text": "^2.14.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.4",
