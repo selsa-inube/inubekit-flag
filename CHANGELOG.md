@@ -2,6 +2,59 @@
 
 #### 🚀 Enhancement
 
+- Auto-merge PR [#49](https://github.com/selsa-inube/inubekit-flag/pull/49) ([@cmarin001](https://github.com/cmarin001))
+- Auto-merge PR [#48](https://github.com/selsa-inube/inubekit-flag/pull/48) ([@cmarin001](https://github.com/cmarin001))
+- Auto-merge PR [#47](https://github.com/selsa-inube/inubekit-flag/pull/47) ([@cmarin001](https://github.com/cmarin001))
+- Auto-merge PR [#46](https://github.com/selsa-inube/inubekit-flag/pull/46) ([@cmarin001](https://github.com/cmarin001))
+- Auto-merge PR [#45](https://github.com/selsa-inube/inubekit-flag/pull/45) ([@cmarin001](https://github.com/cmarin001))
+- Auto-merge PR [#44](https://github.com/selsa-inube/inubekit-flag/pull/44) ([@cmarin001](https://github.com/cmarin001))
+- Auto-merge PR [#43](https://github.com/selsa-inube/inubekit-flag/pull/43) ([@cmarin001](https://github.com/cmarin001))
+- Auto-merge PR [#42](https://github.com/selsa-inube/inubekit-flag/pull/42) ([@cmarin001](https://github.com/cmarin001))
+- Auto-merge PR [#41](https://github.com/selsa-inube/inubekit-flag/pull/41) ([@cmarin001](https://github.com/cmarin001))
+- Auto-merge PR [#40](https://github.com/selsa-inube/inubekit-flag/pull/40) ([@cmarin001](https://github.com/cmarin001))
+- Auto-merge PR [#39](https://github.com/selsa-inube/inubekit-flag/pull/39) ([@cmarin001](https://github.com/cmarin001))
+- Auto-merge PR [#38](https://github.com/selsa-inube/inubekit-flag/pull/38) ([@cmarin001](https://github.com/cmarin001))
+- Auto-merge PR [#37](https://github.com/selsa-inube/inubekit-flag/pull/37) ([@cmarin001](https://github.com/cmarin001))
+- Auto-merge PR [#36](https://github.com/selsa-inube/inubekit-flag/pull/36) ([@cmarin001](https://github.com/cmarin001))
+- Auto-merge PR [#35](https://github.com/selsa-inube/inubekit-flag/pull/35) ([@cmarin001](https://github.com/cmarin001))
+- Auto-merge PR [#34](https://github.com/selsa-inube/inubekit-flag/pull/34) ([@cmarin001](https://github.com/cmarin001))
+- Auto-merge PR [#33](https://github.com/selsa-inube/inubekit-flag/pull/33) ([@cmarin001](https://github.com/cmarin001))
+- Auto-merge PR [#31](https://github.com/selsa-inube/inubekit-flag/pull/31) ([@cmarin001](https://github.com/cmarin001))
+- Auto-merge PR [#30](https://github.com/selsa-inube/inubekit-flag/pull/30) ([@cmarin001](https://github.com/cmarin001))
+- Auto-merge PR [#29](https://github.com/selsa-inube/inubekit-flag/pull/29) ([@cmarin001](https://github.com/cmarin001))
+- Auto-merge PR [#28](https://github.com/selsa-inube/inubekit-flag/pull/28) ([@cmarin001](https://github.com/cmarin001))
+- Auto-merge PR [#27](https://github.com/selsa-inube/inubekit-flag/pull/27) ([@cmarin001](https://github.com/cmarin001))
+- Auto-merge PR [#26](https://github.com/selsa-inube/inubekit-flag/pull/26) ([@cmarin001](https://github.com/cmarin001))
+- Auto-merge PR [#25](https://github.com/selsa-inube/inubekit-flag/pull/25) ([@cmarin001](https://github.com/cmarin001))
+- Auto-merge PR [#24](https://github.com/selsa-inube/inubekit-flag/pull/24) ([@cmarin001](https://github.com/cmarin001))
+- Auto-merge PR [#22](https://github.com/selsa-inube/inubekit-flag/pull/22) ([@cmarin001](https://github.com/cmarin001))
+- Auto-merge PR [#21](https://github.com/selsa-inube/inubekit-flag/pull/21) ([@cmarin001](https://github.com/cmarin001))
+- Auto-merge PR [#20](https://github.com/selsa-inube/inubekit-flag/pull/20) ([@cmarin001](https://github.com/cmarin001))
+- Auto-merge PR [#19](https://github.com/selsa-inube/inubekit-flag/pull/19) ([@cmarin001](https://github.com/cmarin001))
+- Auto-merge PR [#18](https://github.com/selsa-inube/inubekit-flag/pull/18) ([@cmarin001](https://github.com/cmarin001))
+- Auto-merge PR [#17](https://github.com/selsa-inube/inubekit-flag/pull/17) ([@cmarin001](https://github.com/cmarin001))
+- Update foundations dependencies [#16](https://github.com/selsa-inube/inubekit-flag/pull/16) ([@cmarin001](https://github.com/cmarin001))
+- Update foundations dependencies [#15](https://github.com/selsa-inube/inubekit-flag/pull/15) ([@cmarin001](https://github.com/cmarin001))
+- Update Auto-Config to Rename Package [#14](https://github.com/selsa-inube/inubekit-flag/pull/14) ([@cmarin001](https://github.com/cmarin001))
+
+#### ⚠️ Pushed to `main`
+
+- Update package.json ([@cmarin001](https://github.com/cmarin001))
+- Create update-text.yml ([@cmarin001](https://github.com/cmarin001))
+- Create update-stack.yml ([@cmarin001](https://github.com/cmarin001))
+- Create update-icon.yml ([@cmarin001](https://github.com/cmarin001))
+- Create update-foundations.yml ([@cmarin001](https://github.com/cmarin001))
+
+#### Authors: 1
+
+- Cesar Marin Alfonso ([@cmarin001](https://github.com/cmarin001))
+
+---
+
+# v5.1.0 (Mon Sep 02 2024)
+
+#### 🚀 Enhancement
+
 - Auto-merge PR [#48](https://github.com/selsa-inube/inubekit-flag/pull/48) ([@cmarin001](https://github.com/cmarin001))
 - Auto-merge PR [#47](https://github.com/selsa-inube/inubekit-flag/pull/47) ([@cmarin001](https://github.com/cmarin001))
 - Auto-merge PR [#46](https://github.com/selsa-inube/inubekit-flag/pull/46) ([@cmarin001](https://github.com/cmarin001))
