@@ -49,7 +49,7 @@
     "@inubekit/countdownbar": "^2.5.0",
     "@inubekit/foundations": "^5.11.2",
     "@inubekit/hooks": "^1.2.0",
-    "@inubekit/icon": "^2.14.0",
+    "@inubekit/icon": "^2.15.0",
     "@inubekit/stack": "^3.7.0",
     "@inubekit/text": "^2.14.0"
   },
