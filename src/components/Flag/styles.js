@@ -17,7 +17,7 @@ const StyledFlag = styled.li`
     theme?.palette?.neutral?.N0 || inube.palette.neutral.N0};
   width: 400px;
   height: 82px;
-  @media and screen (max-width: 528px) {
+  @media screen and (max-width: 528px) {
     height: 62px;
     width: calc(100vw - 64px);
   }

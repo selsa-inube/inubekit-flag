@@ -15,6 +15,7 @@ import { Icon } from "@inubekit/icon";
 import { IFlagAppearance } from "./props";
 import { StyledFlag } from "./styles";
 import { FlagContext, FlagContextType } from "../../providers/FlagsProvider";
+import { useMediaQueries } from "@inubekit/hooks";
 
 interface IFlag {
   id: string;
@@ -51,6 +52,9 @@ const Flag = (props: IFlag) => {
     removeFlag(id);
   };
 
+  const matches = useMediaQueries(["(max-width: 528px)"]);
+  const isSmallScreen = matches["(max-width: 528px)"];
+
   return (
     <StyledFlag
       $appearance={appearance}
@@ -58,7 +62,11 @@ const Flag = (props: IFlag) => {
       onMouseLeave={() => setIsPaused(false)}
     >
       <Stack justifyContent="space-between" padding="16px">
-        <Stack alignItems="center" gap="16px">
+        <Stack
+          alignItems="center"
+          gap="16px"
+          height={isSmallScreen ? "26px" : "fit-content"}
+        >
           <Icon size="24px" appearance={appearance} icon={selectedIcon} />
           <Stack direction="column" gap="6px">
             <Text type="label" size="large" textAlign="start" weight="bold">
