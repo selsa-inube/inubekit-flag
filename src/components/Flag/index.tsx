@@ -13,11 +13,7 @@ import { CountdownBar } from "@inubekit/countdownbar";
 import { Icon } from "@inubekit/icon";
 
 import { IFlagAppearance } from "./props";
-import {
-  StyledFlag,
-  StyledCountdownBarContainer,
-  StyledCloseIconContainer,
-} from "./styles";
+import { StyledFlag } from "./styles";
 import { FlagContext, FlagContextType } from "../../providers/FlagsProvider";
 
 interface IFlag {
@@ -73,24 +69,21 @@ const Flag = (props: IFlag) => {
             </Text>
           </Stack>
         </Stack>
-        <StyledCloseIconContainer>
-          <Icon
-            size="16px"
-            onClick={handleRemoveFlag}
-            appearance="dark"
-            icon={<MdClear />}
-          />
-        </StyledCloseIconContainer>
+        <Icon
+          size="16px"
+          onClick={handleRemoveFlag}
+          appearance="dark"
+          icon={<MdClear />}
+          cursorHover={true}
+        />
       </Stack>
       {duration && (
-        <StyledCountdownBarContainer>
-          <CountdownBar
-            paused={isPaused}
-            appearance={appearance}
-            duration={duration}
-            onCountdown={handleRemoveFlag}
-          />
-        </StyledCountdownBarContainer>
+        <CountdownBar
+          paused={isPaused}
+          appearance={appearance}
+          duration={duration}
+          onCountdown={handleRemoveFlag}
+        />
       )}
     </StyledFlag>
   );

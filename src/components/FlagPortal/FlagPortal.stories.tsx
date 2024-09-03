@@ -28,12 +28,7 @@ const Default = () => {
     });
   };
 
-  return (
-    <>
-      <Button onClick={handleClick}>Show Message</Button>
-      <FlagPortal />
-    </>
-  );
+  return <Button onClick={handleClick}>Show Message</Button>;
 };
 
 export { Default };

@@ -1,37 +1,26 @@
 import styled from "styled-components";
 import { inube } from "@inubekit/foundations";
 
-const StyledFlag = styled.div`
-  width: 100%;
-  max-width: 400px;
-  height: 100%;
-  max-height: 82px;
+const StyledFlag = styled.li`
+  list-style: none;
   border-radius: 4px;
   box-shadow:
-    0px 1px 2px rgba(0, 0, 0, 0.3),
-    0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+    0px 1px 2px
+      ${({ theme }) =>
+        theme?.palette?.neutralAlpha?.N40A || inube.palette.neutralAlpha.N40A},
+    0px 1px 3px 1px
+      ${({ theme }) =>
+        theme?.palette?.neutralAlpha?.N40A || inube.palette.neutralAlpha.N40A};
   overflow: hidden;
   overflow-wrap: anywhere;
   background-color: ${({ theme }) =>
     theme?.palette?.neutral?.N0 || inube.palette.neutral.N0};
-
-  @media (max-width: 400px) {
-    max-width: 312px;
-    max-height: 78px;
+  width: 400px;
+  height: 82px;
+  @media and screen (max-width: 528px) {
+    height: 62px;
+    width: calc(100vw - 64px);
   }
 `;
 
-const StyledCountdownBarContainer = styled.div`
-  margin-top: -4px;
-  > div {
-    border-radius: 4px;
-  }
-`;
-
-const StyledCloseIconContainer = styled.div`
-  & > figure {
-    cursor: pointer;
-  }
-`;
-
-export { StyledFlag, StyledCountdownBarContainer, StyledCloseIconContainer };
+export { StyledFlag };
