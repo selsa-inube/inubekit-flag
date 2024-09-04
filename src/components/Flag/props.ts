@@ -4,7 +4,6 @@ const appearances = [
   "warning",
   "success",
   "help",
-  "light",
   "gray",
   "dark",
 ] as const;

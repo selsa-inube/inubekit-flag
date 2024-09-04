@@ -46,11 +46,12 @@
     "styled-components": "^6.1.8"
   },
   "dependencies": {
+    "@inubekit/button": "^4.10.0",
     "@inubekit/countdownbar": "^2.5.0",
     "@inubekit/foundations": "^5.11.2",
     "@inubekit/hooks": "^1.2.0",
-    "@inubekit/icon": "^2.15.1",
-    "@inubekit/stack": "^3.7.0",
+    "@inubekit/icon": "^2.15.0",
+    "@inubekit/stack": "^3.8.0",
     "@inubekit/text": "^2.15.0"
   },
   "devDependencies": {
