@@ -46,7 +46,7 @@
     "styled-components": "^6.1.8"
   },
   "dependencies": {
-    "@inubekit/button": "^4.10.0",
+    "@inubekit/button": "^4.34.0",
     "@inubekit/countdownbar": "^2.5.0",
     "@inubekit/foundations": "^5.11.2",
     "@inubekit/hooks": "^1.2.0",
