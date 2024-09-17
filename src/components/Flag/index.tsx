@@ -44,7 +44,14 @@ const Flag = (props: IFlag) => {
   const [isPaused, setIsPaused] = useState(false);
   const { removeFlag } = useContext(FlagContext) as FlagContextType;
 
-  const newDescription = description.substring(0, 240);
+  const newDescription = () => {
+    const maxLength = 45;
+    if (description.length > maxLength) {
+      return `${description.substring(0, maxLength)}...`;
+    } else {
+      return description;
+    }
+  };
 
   const selectedIcon = getIconForAppearance(appearance);
 
@@ -73,7 +80,7 @@ const Flag = (props: IFlag) => {
               {title}
             </Text>
             <Text size="medium" appearance="gray" textAlign="start">
-              {newDescription}
+              {newDescription()}
             </Text>
           </Stack>
         </Stack>
