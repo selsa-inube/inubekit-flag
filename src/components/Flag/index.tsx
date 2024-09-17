@@ -45,7 +45,7 @@ const Flag = (props: IFlag) => {
   const { removeFlag } = useContext(FlagContext) as FlagContextType;
 
   const newDescription = () => {
-    const maxLength = 45;
+    const maxLength = 80;
     if (description.length > maxLength) {
       return `${description.substring(0, maxLength)}...`;
     } else {
