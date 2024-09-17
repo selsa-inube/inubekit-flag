@@ -1,3 +1,15 @@
+# v7.1.0 (Tue Sep 17 2024)
+
+#### 🚀 Enhancement
+
+- feat: extend description max length to 80ch [#52](https://github.com/selsa-inube/inubekit-flag/pull/52) ([@wfercanas](https://github.com/wfercanas))
+
+#### Authors: 1
+
+- Fernando Cañas ([@wfercanas](https://github.com/wfercanas))
+
+---
+
 # v7.0.1 (Tue Sep 17 2024)
 
 #### 🐛 Bug Fix
