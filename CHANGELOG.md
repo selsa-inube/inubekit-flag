@@ -1,3 +1,15 @@
+# v7.0.1 (Tue Sep 17 2024)
+
+#### 🐛 Bug Fix
+
+- fix(flag): adjust max length in description and flag min-height [#51](https://github.com/selsa-inube/inubekit-flag/pull/51) ([@wfercanas](https://github.com/wfercanas))
+
+#### Authors: 1
+
+- Fernando Cañas ([@wfercanas](https://github.com/wfercanas))
+
+---
+
 # v6.0.0 (Wed Sep 04 2024)
 
 #### 💥 Breaking Change
