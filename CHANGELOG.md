@@ -1,3 +1,15 @@
+# v7.8.0 (Thu Oct 10 2024)
+
+#### 🚀 Enhancement
+
+- Auto-merge PR [#59](https://github.com/selsa-inube/inubekit-flag/pull/59) ([@cmarin001](https://github.com/cmarin001))
+
+#### Authors: 1
+
+- Cesar Marin Alfonso ([@cmarin001](https://github.com/cmarin001))
+
+---
+
 # v7.7.0 (Wed Oct 09 2024)
 
 #### 🚀 Enhancement
